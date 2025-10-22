@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Booking - Clean UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      background: #ffffff;
+      background-color: #1E90FF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      color: #222;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .container {
+      background: #ffffff;
+      max-width: 460px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 40px 35px 50px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      color: #222;
+    }
+
+    .input-group {
+      position: relative;
+      margin-top: 30px;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 16px 50px 16px 16px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 30px;
+      outline: none;
+      color: #222;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus {
+      border-color: #4e54c8;
+      box-shadow: 0 0 10px rgba(78, 84, 200, 0.3);
+      background-color: #fff;
+    }
+
+    label {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      font-size: 16px;
+      color: #888;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: transparent;
+      padding: 0 5px;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 13px;
+      color: #4e54c8;
+      font-weight: 600;
+      background: #fff;
+      left: 15px;
+      border-radius: 5px;
+    }
+
+    .input-icon {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #aaa;
+    }
+
+    button {
+      margin-top: 40px;
+      width: 100%;
+      padding: 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      background: #1E90FF;
+      color: #fff;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    button:hover,
+    button:focus {
+      background: #1E90FF;
+      box-shadow: 0 12px 24px rgba(60, 64, 198, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .swiper {
+      max-width: 1000px;
+      width: 90vw;
+      height: 320px;
+      margin-top: 70px;
+      border-radius: 20px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+      cursor: grab;
+      transition: transform 0.4s ease;
+    }
+
+    .swiper-slide-active {
+      transform: scale(1.1);
+      filter: drop-shadow(0 12px 22px rgba(78, 84, 200, 0.2));
+      z-index: 10;
+    }
+
+    .swiper-slide img {
+      border-radius: 18px;
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #4e54c8;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(78, 84, 200, 0.1);
+      box-shadow: 0 6px 20px rgba(78, 84, 200, 0.2);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      background: #4e54c8;
+      color: #fff;
+    }
+
+    .swiper-pagination-bullet {
+      background: #4e54c8;
+      opacity: 0.85;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 25px 40px;
+      }
+
+      .swiper-slide img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .swiper {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Booking Form">
+    <h2>Manage Your Booking</h2>
+    <form id="bookingForm" onsubmit="return validateForm()" novalidate>
+      <div class="input-group">
+        <input type="text" id="pnr" name="pnr" placeholder=" " required autocomplete="off" />
+        <label for="pnr">PNR No.</label>
+        <span class="input-icon">🛂</span>
+      </div>
+      <div class="input-group">
+        <input type="text" id="phone" name="phone" placeholder=" " pattern="\d{10}" required autocomplete="off" />
+        <label for="phone">Phone Number (Registered)</label>
+        <span class="input-icon">📞</span>
+      </div>
+      <div class="input-group">
+        <input type="date" id="journeyDate" name="journeyDate" placeholder=" " required />
+        <label for="journeyDate">Journey Date</label>
+        <span class="input-icon">📅</span>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://res.cloudinary.com/dyiffrkzh/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_518,q_auto,w_660/v1684737323/bbj/dcud1eyuhietgfzv7h6x.jpg" alt="Scenic landscape" /></div>
+      <div class="swiper-slide"><img src="https://i.redd.it/5ytfqdx5joxb1.png" alt="Abstract image" /></div>
+      <div class="swiper-slide"><img src="https://www.savaari.com/blog/wp-content/uploads/2022/10/Flying-Landscape-Paraglider-Paragliding-Mountains-2704856.jpg" alt="Paraglider" /></div>
+      <div class="swiper-slide"><img src="https://s3.india.com/wp-content/uploads/2024/03/Feature-Image_-Dehradun-2.jpg?impolicy=Medium_Widthonly&w=500&h=375" alt="Dehradun view" /></div>
+      <div class="swiper-slide"><img src="https://withlocals-com-res.cloudinary.com/image/upload/w_830,h_467,c_fill,g_auto,q_auto,dpr_1.0,f_auto/v1/destinations/india/Delhi/HHG/AdobeStock_263809891" alt="Delhi cityscape" /></div>
+      <div class="swiper-slide"><img src="https://www.savaari.com/blog/wp-content/uploads/2021/01/indian-temple-4782312_1920-1024x683.jpg" alt="Indian temple" /></div>
+      <div class="swiper-slide"><img src="https://media.licdn.com/dms/image/D5612AQFXj1Z7Q-_nZg/article-cover_image-shrink_720_1280/0/1714726998771?e=2147483647&v=beta&t=izZCp9zxmSGw-SqM4MYWdvB6oxArVXdpd0KVXs_uPNA" alt="Skyline sunset" /></div>
+    </div>
+
+    <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+    <div class="swiper-pagination" role="navigation" aria-label="Carousel Pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      grabCursor: true,
+      speed: 700,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      breakpoints: {
+        0: { slidesPerView: 1, spaceBetween: 10 },
+        600: { slidesPerView: 2, spaceBetween: 20 },
+        900: { slidesPerView: 3, spaceBetween: 30 },
+      }
+    });
+
+    function validateForm() {
+      const pnr = document.getElementById('pnr').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const journeyDate = document.getElementById('journeyDate').value;
+
+      if (!pnr) {
+        alert('Please enter your PNR number.');
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(phone)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return false;
+      }
+
+      if (!journeyDate) {
+        alert('Please select your journey date.');
+        return false;
+      }
+
+      alert('Searching booking details...');
+      return false;
+    }
+  </script>
+</body>
+</html>

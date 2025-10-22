@@ -1,0 +1,698 @@
+/* .nav-bar {
+  position: static;
+    height: 85px;
+    width: 68.5%;
+    margin-top: 40px;
+    padding-left: 40rem;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: Georgia, serif;
+    display: flex;
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 14px rgba(0, 10, 20, 0.5);
+} */
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%; /* full width to stick across screen */
+  height: 85px;
+  gap: 90px;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 14px rgba(0, 10, 20, 0.5);
+  background-color: white; /* required so content doesn't show through */
+  z-index: 999;
+}
+
+.nav-bar a {
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #4169E1;
+}
+
+.search-bar {
+    height: 95px;
+    width: 102%;
+    margin-top: 8%;
+    font-size: 24px;
+    padding-left: 190px;
+    color: rgb(23, 17, 17);
+
+}
+
+.form-input {
+    display: flex;
+    gap: 52px;
+    align-items: center;
+}
+
+#origin-select option {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#origin-select option {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+
+#origin-select {
+    height: 30px;
+    width: 150px;
+    font-size: large;
+}
+
+#destination-select {
+    height: 30px;
+    width: 150px;
+    font-size: large;
+}
+
+#I1 {
+    height: 25px;
+    width: 150px;
+}
+
+#I2 {
+    height: 25px;
+    width: 150px;
+}
+
+
+.btn {
+    height: 38px;
+    width: 150px;
+    border: white;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+.btn a {
+    color: white;
+    font-size: 19px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.search-type {
+    height: 140px;
+    width: 93%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 180px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 10, 20, 0.4);
+}
+
+.search-type img {
+    height: 140px;
+    width: 230px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.bus-route {
+    height: 80px;
+    width: 7%;
+    font-size: 21px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.amenity-icon {
+    margin: 2px;
+    color: #4169E1;
+}
+
+.bus-type {
+    height: 80px;
+    width: 13.5%;
+    margin-left: 60px;
+    margin-bottom: 18px;
+    font-size: 21px;
+    font-weight: 300;
+    
+}
+
+.bus-start-time {
+    height: 85px;
+    width: 7%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total-time {
+    height: 50px;
+    width: 6%;
+    text-align: center;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.bus-terminate-time {
+    height: 80px;
+    width: 7.5%;
+    margin-left: 45px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.seats-available {
+    height: 40px;
+    width: 7%;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.ticket-fare {
+    height: 30px;
+    width: 5%;
+    margin-left: 40px;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.view-seats {
+    height: 25px;
+    width: 5%;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.view-seats button {
+    height: 35px;
+    width: 130px;
+    border: white;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    background: red;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.boarding-point {
+    color: #4169E1;
+    cursor: pointer;
+}
+
+.dropping-point {
+    color: #4169E1;
+    cursor: pointer;
+}
+
+.options-input {
+    height: 21px;
+    width: 90px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.color-bar {
+    height: 50px;
+    width: 102.7%;
+    margin-top: 30px;
+    /* background:#333; */
+    background-color: red;
+    border-radius: 10px;
+}
+
+.left-part {
+    height: 270px;
+    width: 19%;
+    margin-top: 50px;
+    margin-left: 130px;
+}
+
+.info-left-part {
+    font-size: 17px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-container {
+    height: 370px;
+    width: 102.7%;
+    color: #aaa;
+    display: flex;
+    background-color: #1d1d1d;
+}
+
+.address-info {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.helpline-details {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.middle-part {
+    height: 250px;
+    width: 36%;
+    margin-left: 140px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-links {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 60px;
+
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration:underline;
+
+}
+
+.info-middle-part {
+    display: flex;
+    margin-top: 15px;
+}
+
+.links-x{ 
+    text-align: center;
+}
+
+.links-y{
+    margin-left: 50px;
+    text-align: center;
+}
+
+.links-z{
+    text-align: center;
+    margin-left:20px;
+}
+
+.end-part {
+    height: 250px;
+    width: 15%;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-left: 150px;
+    text-align: center;
+}
+
+.social-links {
+    font-size: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-links:hover {
+    color: white;
+}
+
+.all-rights {
+    height: 30px;
+    width: 102.7%;
+    color: #aaa;
+    font-size: 20px;
+    padding-top: 3px;
+    font-weight: 400;
+    background-color: #333;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======= MEDIA QUERIES FOR RESPONSIVENESS ======= */
+
+/* Extra Large Screens (Above 1440px) */
+@media (min-width: 1440px) {
+  .nav-bar {
+    padding-left: 35rem;
+  }
+}
+
+/* Laptops and Desktops (1025px - 1440px) */
+@media (max-width: 1440px) {
+  .nav-bar {
+    width: 90%;
+    padding-left: 20rem;
+    gap: 40px;
+    font-size: 20px;
+  }
+
+  .search-bar,
+  .search-type,
+  .color-bar,
+  .bottom-container,
+  .all-rights {
+    width: 100%;
+  }
+
+  .middle-part {
+    width: 40%;
+    margin-left: 80px;
+  }
+
+  .end-part {
+    margin-left: 80px;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .search-bar {
+    padding-left: 40px;
+    font-size: 20px;
+  }
+
+  .form-input {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search-type {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .search-type img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .middle-part,
+  .end-part,
+  .left-part {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-left: 0;
+  }
+
+  .info-middle-part {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Smartphones (481px - 767px) */
+@media (max-width: 767px) {
+  .nav-bar {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .search-bar {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  .form-input {
+    gap: 10px;
+  }
+
+  #origin-select,
+  #destination-select,
+  #I1,
+  #I2,
+  .btn {
+    width: 100%;
+  }
+
+  .search-type {
+    padding-left: 10px;
+  }
+
+  .bus-route,
+  .bus-type,
+  .bus-start-time,
+  .total-time,
+  .bus-terminate-time,
+  .seats-available,
+  .ticket-fare,
+  .view-seats {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .view-seats button {
+    width: 100%;
+  }
+
+  .color-bar,
+  .all-rights {
+    font-size: 16px;
+  }
+}
+
+/* Small Devices (Up to 480px) */
+@media (max-width: 480px) {
+  .nav-bar {
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .search-bar {
+    font-size: 16px;
+  }
+
+  .form-input {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-type {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .bottom-container {
+    font-size: 16px;
+  }
+
+  .footer-links,
+  .address-info,
+  .helpline-details {
+    font-size: 16px;
+  }
+
+  .all-rights {
+    font-size: 14px;
+  }
+
+  .social-links {
+    font-size: 24px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info-middle-part,
+  .social-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-middle-part span,
+  .social-links span {
+    display: block;
+    margin: 6px 0;
+    font-size: 16px;
+  }
+
+  .info-middle-part h2,
+  .social-links h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .social-links i {
+    font-size: 24px;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .bottom-footer {
+    font-size: 12px;
+    padding: 10px 5px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info-middle-part,
+  .social-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-middle-part span,
+  .social-links span {
+    display: block;
+    margin: 6px 0;
+    font-size: 16px;
+  }
+
+  .info-middle-part h2,
+  .social-links h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .social-links i {
+    font-size: 24px;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .bottom-footer {
+    font-size: 12px;
+    padding: 10px 5px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .bus-info, .bus-time, .bus-details {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .bus-info span,
+  .bus-time span,
+  .bus-details span {
+    display: block;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .search-bar, .color-bar {
+    width: 100%;
+  }
+
+  .color-bar {
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+  }
+
+  .bus-icon,
+  .location-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar,
+  .search-container,
+  .bus-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .view-seats-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}

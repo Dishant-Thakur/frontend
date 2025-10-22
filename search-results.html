@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="nav-bar">
+      <span class="nav-links"> <a href="Home Page.html">Home</a></span>
+      <span class="nav-links"><a href="Booking.html">Manage Booking</a></span>
+      <span class="nav-links"><a href="#">Gallery</a></span>
+      <span class="nav-links"><a href="#">Contact</a></span>
+      <span class="nav-links"><a href="login.html">Login</a></span>
+      <span class="nav-links"><a href="Sign Up.html">Sign up</a></span>
+    </div>
+  </header>
+
+  <div class="search-bar">
+    <form action="" class="form-input">
+      <label for="Origin">Origin</label>
+      <select name="Places" id="origin-select">
+        <option value="Bir">Bir(Himachal Pradesh)</option>
+        <option value="Bir road">Bir road</option>
+        <option value="Baijnath">Baijnath</option>
+        <option value="Palampur">Palampur</option>
+        <option value="Thakurdwara">Thakurdwara</option>
+        <option value="Kangra">Kangra</option>
+        <option value="Amb">Amb</option>
+        <option value="Una">Una</option>
+        <option value="Mandi">Mandi</option>
+        <option value="Kullu">Kullu</option>
+        <option value="Manali">Manali</option>
+        <option value="Shimla">Shimla</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Dehradun">Dehradun</option>
+        <option value="Ambala">Ambala</option>
+        <option value="Kurukshetra">Kuruksheta</option>
+        <option value="Dharamshala">Dharamshala</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+
+      <label for="destination">Destination</label>
+      <select name="Places" id="destination-select">
+        <option value="Bir">Bir(Himachal Pradesh)</option>
+        <option value="Bir road">Bir road</option>
+        <option value="Baijnath">Baijnath</option>
+        <option value="Palampur">Palampur</option>
+        <option value="Thakurdwara">Thakurdwara</option>
+        <option value="Kangra">Kangra</option>
+        <option value="Amb">Amb</option>
+        <option value="Una">Una</option>
+        <option value="Mandi">Mandi</option>
+        <option value="Manali">Manali</option>
+        <option value="Shimla">Shimla</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Dehradun">Dehradun</option>
+        <option value="Ambala">Ambala</option>
+        <option value="Kurukshetra">Kuruksheta</option>
+        <option value="Dharamshala">Dharamshala</option>
+        <option value="Manali">Manali</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+
+      <label for="going-date">Onward Date</label>
+      <input type="date" name="onward-date" id="I1">
+
+      <label for="coming-date">Return Date</label>
+      <input type="date" name="return-date" id="I2">
+      <button class="btn"><a href="#">Search</a></button>
+
+    </form>
+  </div>
+  <div class="color-bar"></div>
+  <div class="search-container">
+    <div class="search-type">
+      <img src="" alt="service 1" class="bus-images">
+
+      <div class="bus-route">Bir to Delhi <br>
+        <span>i via</span> <br>
+        <span class="amenity-icon"><i class="fa-solid fa-rug"></i></span>
+        <span class="amenity-icon"><i class="fas fa-battery-full"></i></span>
+        <span class="amenity-icon"><i class="fas fa-bottle-water"></i></span>
+        <span>+2</span>
+      </div>
+
+      <div class="bus-type">Bus Type <br>
+        <span class=""><i class="fa-solid fa-bus-simple" style="color: #4169E1;"></i> 2+2, FLIX BUS Volvo 9600,
+          Semi-Sleeper Premium AC(45) seats</span>
+      </div>
+
+      <div class="bus-start-time">
+        <span><i class="fa-solid fa-clock"></i>  06:30 PM 17 July, Thu</span>
+        <span class="boarding-point">Boarding Point </span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <!-- <option value="Bir">Bir (Manu Bus Stand)</option>
+          <option value="Bir-chowk">Bir (Chougan Chowk)</option>
+          <option value="Bir-road">Bir Road</option>
+          <option value="Baijnath">Baijnath</option> -->
+        </select>
+      </div>
+
+      <div class="total-time">
+        <span><i class="fa-solid fa-arrow-right"></i></span> <br>
+        <span>11:30 Hrs</span>
+      </div>
+
+      <div class="bus-terminate-time">
+        <span><i class="fa-solid fa-clock"></i>  06:00 AM </span> <br>
+        <span>18 July, Fri</span>
+        <span class="dropping-point">Dropping Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <option value="Karnal">Karnal Bypass</option>
+          <option value="Delhi(Majnu Ka Tilla)">Delhi (Majnu Ka Tilla)</option>
+          <option value="Delhi">Delhi (Kashmere Gate)</option>
+        </select>
+
+      </div>
+
+      <div class="seats-available">13 <br>
+        <span>seats available</span>
+      </div>
+
+      <div class="ticket-fare">Rs1299 /-</div>
+
+      <div class="view-seats">
+        <button class="seats">View Seats</button>
+      </div>
+    </div>
+
+    <div class="search-type">
+      <img src="" alt="service 2" class="bus-images">
+
+      <div class="bus-route">Bir to Delhi <br>
+        <span>i via</span> <br>
+        <span class="amenity-icon"><i class="fa-solid fa-rug"></i></span>
+        <span class="amenity-icon"><i class="fas fa-battery-full"></i></span>
+        <span class="amenity-icon"><i class="fas fa-bottle-water"></i></span>
+        <span>+2</span>
+      </div>
+
+      <div class="bus-type">Bus Type <br>
+        <span class=""><i class="fa-solid fa-bus-simple" style="color: #4169E1;"></i> 2+2, Volvo 9600 Semi-Sleeper,
+          Multi-Axle AC(55) seats</span>
+      </div>
+
+      <div class="bus-start-time">
+        <span><i class="fa-solid fa-clock"></i>  06:45 PM 17 July, Thu</span>
+        <span class="boarding-point">Boarding Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <!-- <option value="Bir">Bir (Manu Bus Stand)</option>
+          <option value="Bir-chowk">Bir (Chougan Chowk)</option>
+          <option value="Bir-road">Bir Road</option>
+          <option value="Baijnath">Baijnath</option> -->
+        </select>
+      </div>
+
+      <div class="total-time">
+        <span><i class="fa-solid fa-arrow-right"></i></span> <br>
+        <span>12:00 Hrs</span>
+      </div>
+
+      <div class="bus-terminate-time">
+        <span><i class="fa-solid fa-clock"></i>  06:45 AM 18 July, Fri</span>
+        <span class="dropping-point">Dropping Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <option value="Karnal">Karnal Bypass</option>
+          <option value="Delhi(Majnu Ka Tilla)">Delhi (Majnu Ka Tilla)</option>
+          <option value="Delhi">Delhi (Kashmere Gate)</option>
+        </select>
+      </div>
+
+      <div class="seats-available">18 <br>
+        <span>seats available</span>
+      </div>
+
+      <div class="ticket-fare">Rs1465 /-</div>
+
+      <div class="view-seats">
+        <button class="seats">View Seats</button>
+      </div>
+    </div>
+
+    <div class="search-type">
+      <img src="" alt="service 3" class="bus-images">
+
+      <div class="bus-route">Bir to Delhi <br>
+        <span>i via</span> <br>
+        <span class="amenity-icon"><i class="fa-solid fa-rug"></i></span>
+        <span class="amenity-icon"><i class="fas fa-battery-full"></i></span>
+        <span class="amenity-icon"><i class="fas fa-bottle-water"></i></span>
+        <span>+2</span>
+      </div>
+
+      <div class="bus-type">Bus Type <br>
+        <span class=""><i class="fa-solid fa-bus-simple " style="color: #4169E1;"></i> 2+2, ZING BUS MAXX Luxury Volvo
+          Semi-Sleeper Multi-Axle AC(55) seats</span>
+      </div>
+
+      <div class="bus-start-time">
+        <span><i class="fa-solid fa-clock"></i>  07:15 PM</span> <br>
+        <span>17 July, Thu</span> <br>
+        <span class="boarding-point">Boarding Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <!-- <option value="Bir">Bir (Manu Bus Stand)</option>
+          <option value="Bir-chowk">Bir (Chougan Chowk)</option>
+          <option value="Bir-road">Bir Road</option>
+          <option value="Baijnath">Baijnath</option> -->
+        </select>
+      </div>
+
+      <div class="total-time">
+        <span><i class="fa-solid fa-arrow-right"></i></span> <br>
+        <span>12:00 Hrs</span>
+      </div>
+
+      <div class="bus-terminate-time">
+        <span><i class="fa-solid fa-clock"></i>  07:15 AM 18 July, Fri</span>
+        <span style="color: #4169E1">Dropping Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <option value="Karnal">Karnal Bypass</option>
+          <option value="Delhi(Majnu Ka Tilla)">Delhi (Majnu Ka Tilla)</option>
+          <option value="Delhi">Delhi (Kashmere Gate)</option>
+        </select>
+      </div>
+
+      <div class="seats-available">5 <br>
+        <span>seats available</span>
+      </div>
+
+      <div class="ticket-fare">Rs1699 /-</div>
+      <div class="view-seats">
+        <button class="seats">View Seats</button>
+      </div>
+
+    </div>
+
+    <div class="search-type">
+      <img src="" alt="service 4" class="bus-images">
+
+      <div class="bus-route">Bir to Delhi <br>
+        <span>i via</span> <br>
+        <span class="amenity-icon"><i class="fa-solid fa-rug"></i></span>
+        <span class="amenity-icon"><i class="fas fa-battery-full"></i></span>
+        <span class="amenity-icon"><i class="fas fa-bottle-water"></i></span>
+        <span>+2</span>
+      </div>
+
+      <div class="bus-type">Bus Type <br>
+        <span class=""><i class="fa-solid fa-bus-simple" style="color: #4169E1;"></i> 2+2, SCANIA Semi-Sleeper
+          Multi-Axle AC(53) seats</span>
+      </div>
+
+      <div class="bus-start-time">
+        <span><i class="fa-solid fa-clock"></i>  07:30 PM</span> <br>
+        <span>17 July, Thu</span> <br>
+        <span class="boarding-point">Boarding Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <!-- <option value="Bir">Bir (Manu Bus Stand)</option>
+          <option value="Bir-chowk">Bir (Chougan Chowk)</option>
+          <option value="Bir-road">Bir Road</option>
+          <option value="Baijnath">Baijnath</option> -->
+        </select>
+      </div>
+
+      <div class="total-time">
+        <span><i class="fa-solid fa-arrow-right"></i></span> <br>
+        <span>12:00 Hrs</span>
+      </div>
+
+      <div class="bus-terminate-time">
+        <span><i class="fa-solid fa-clock"></i>  07:30 AM 18 July, Fri</span>
+        <span class="dropping-point">Dropping Point</span>
+
+        <select class="options-input">
+          <option value="Select">Select</option>
+          <option value="Karnal">Karnal Bypass</option>
+          <option value="Delhi(Majnu Ka Tilla)">Delhi (Majnu Ka Tilla)</option>
+          <option value="Delhi">Delhi (Kashmere Gate)</option>
+        </select>
+      </div>
+
+      <div class="seats-available">0 <br>
+        <span>seats available</span>
+      </div>
+
+      <div class="ticket-fare">Rs1699 /-</div>
+
+      <div class="view-seats">
+        <button class="seats">View Seats</button>
+      </div>
+    </div>
+  </div>
+  <div class="color-bar"></div>
+
+  <!-- bottom part -->
+  <footer>
+    <div class="bottom-container">
+      <div class="left-part">
+        <h1>GET IN TOUCH</h1>
+
+        <div class="info-left-part">
+          <div class="address-info"><span> <h3><i class="fas fa-map-marker-alt"></i> Himalayan Express Bus Pvt. Ltd Office-</h3></span>
+          <span>Janakpuri East 110058 Magneta metro lines, New Delhi</span>
+          </div> 
+    
+          <div class="helpline-details"> <h3>Customer Helpline :</h3>
+          <span><i class="fa-solid fa-phone"></i> 91+xxxxxx9670</i></span> <br>
+          <span><i class="fa-solid fa-envelope"></i> info.himalayanexpressbus@gmail.com</span>
+          </div> 
+        </div>
+      </div>
+
+      <div class="middle-part">
+        <h1>USEFUL - LINKS</h1>
+        <div class="info-middle-part">
+
+          <div class="footer-links">
+            <div class="links-x">
+            <a href="#">Offers</a> <br>
+            <a href="#">Schedules</a> <br>
+            <a href="#">Refund Status</a> <br>
+            <a href="#">Privacy Policy</a> <br>
+            <a href="#">FAQ</a> <br>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="links-y">
+            <a href="#">Gallery</a> <br>
+            <a href="#">Contact Us</a> <br>
+            <a href="#">Testimonials</a> <br>
+            <a href="#">Phone Booking</a> <br>
+            <a href="#">Manage Booking</a> <br>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="links-z">
+            <a href="#">Feedback</a> <br>
+            <a href="#">About Us</a> <br>
+            <a href="#">Agent Login</a> <br>
+            <a href="#">Agent Registration</a> <br>
+            <a href="#">Terms & Conditions</a> <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="end-part">
+        <h1>REACH US ON</h1>
+        <div class="social-links">
+          <span><i class="fa-brands fa-facebook"></i></span>
+          <span><i class="fa-brands fa-instagram"></i></span>
+          <span><i class="fa-brands fa-square-whatsapp"></i></span>
+          <span><i class="fa-brands fa-linkedin"></i></span>
+          <span><i class="fa-brands fa-youtube"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="all-rights"><span>Copyrights &copy; 2025 All rights reserved.by Himalayan Express Bus</span></div>
+  </footer>
+
+  <script></script>
+</body>
+</html>
